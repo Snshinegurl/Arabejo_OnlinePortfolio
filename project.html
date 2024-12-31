@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="profile-container">
+            <img src="img/we.jpg" alt="Your Photo" class="profile-pic">
+            <h2>Marc Jm Arabejo</h2>
+            <p class="designer-title">Graphics Designer/Full Stack Dev.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/mj.arabejo.1"><img src="img/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/jey.emmm3/"><img src="img/ig.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/arabejo-jm-a64263336/"><img src="img/in.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+
+        <a href="https://drive.google.com/file/d/1to4kDvYYWCQldb3fW5saJCUXH6N8vAP5/view?usp=sharing" download class="btn">Download CV</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="section-title">Projects</h1> 
+        <div class="project-grid">
+            <!-- Project Cards -->
+            <div class="project-card" data-project="1">
+                <img src="img/project/banking/bs.png" alt="Project 1 Cover" class="project-cover">
+                <h3>BANKING SYSTEM</h3>
+            </div>
+            <div class="project-card" data-project="2">
+                <img src="img/project/capsphere/cp.png" alt="Project 2 Cover" class="project-cover">
+                <h3>CAPSPHERE</h3>
+            </div>
+            <div class="project-card" data-project="3">
+                <img src="img/project/bis/bh.png" alt="Project 3 Cover" class="project-cover">
+                <h3>BOL.ANON HUB</h3>
+            </div>
+			<!--
+            <div class="project-card" data-project="4">
+                <img src="img/COMPFESTA.png" alt="Project 4 Cover" class="project-cover">
+                <h3>Project Title 4</h3>
+            </div>
+            <div class="project-card" data-project="5">
+                <img src="img/COMPFESTA.png" alt="Project 5 Cover" class="project-cover">
+                <h3>Project Title 5</h3>
+            </div>		
+            <div class="project-card" data-project="5">
+                <img src="img/COMPFESTA.png" alt="Project 5 Cover" class="project-cover">
+                <h3>Project Title 5</h3>
+            </div>		-->				
+        </div>
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="taskbar-background">
+            <ul>
+                <li><a href="index.html"><img src="img/about.png" alt="About Icon"> About</a></li>
+                <li><a href="project.html"><img src="img/work.png" alt="Project Icon"> Project</a></li>
+                <li><a href="blog.html"><img src="img/blog.png" alt="Blogs Icon"> Services</a></li>
+                <li><a href="certificate.html"><img src="img/ct.png" alt="Certificate Icon"> Certification</a></li>
+                <li><a href="contact.html"><img src="img/contact.png" alt="Contact Icon"> Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-img" src="" alt="Project Image">
+            <p id="modal-description"></p>
+            <a id="modal-download" href="#" download class="btn">Download Project</a>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const projects = [
+        { 
+            id: 1, 
+            title: "Banking System", 
+            description: "Banks all over the world are facing a common problem with how to manage the customers' needs, especially with the convenience of the customers. The manual way of depositing and withdrawing money, checking and managing a person's bank account is inefficient, not just takes an intensive time but also has the chance of human error. Finding a new way of managing a bank is more crucial than ever.", 
+            images: ["img/project/banking/bs.png", "img/project/banking/bs2.png", "img/project/banking/bs3.png", "img/project/banking/bs4.png", "img/project/banking/bs5.png", "img/project/banking/bs6.png"], 
+            downloadLink: "https://drive.google.com/file/d/1eUyo_EvlbNX8AaGStpk5JKFVqs8DQKOK/view?usp=sharing" 
+        },
+        { 
+            id: 2, 
+            title: "Capsphere", 
+            description: "Capsphere is a dedicated platform designed to bridge this gap, offering a seamless, user-friendly solution for artists to display their work and for clients to discover and hire creative professionals.", 
+            images: ["img/project/capsphere/cp.png", "img/project/capsphere/cp2.png", "img/project/capsphere/cp3.png", "img/project/capsphere/cp4.png", "img/project/capsphere/cp5.png", "img/project/capsphere/cp6.png"], 
+            downloadLink: "https://drive.google.com/drive/folders/1NE4KMzLYOj_3jpp7xVKzzcHYtqcS4nUh?usp=drive_link" 
+        },
+        { 
+            id: 3, 
+            title: "Bol.Anon Hub", 
+            description: "Welcome to Bol.Anon HUB, your dedicated resource for the Bol.anon Bisaya language from Bohol. Explore a comprehensive dictionary and translation platform that showcases the unique words and phrases of Bol.anon Bisaya. Whether you're a native speaker, learner, or simply curious, Bol.Anon HUB connects you to the rich linguistic heritage of Bohol, offering accurate translations and insights into this beautiful dialect.", 
+            images: ["img/project/bis/bh.png", "img/project/bis/bh1.png", "img/project/bis/bh6.png",  "img/project/bis/bh3.png", "img/project/bis/bh4.png", "img/project/bis/bh5.png"], 
+            downloadLink: "files/project3.zip" 
+        },
+        { 
+            id: 4, 
+            title: "Project Title 4", 
+            description: "This is the description for Project 4.", 
+            images: ["img/project4/1.jpg", "img/project4/2.jpg"], 
+            downloadLink: "files/project4.zip" 
+        },
+    ];
+
+    const modal = document.getElementById("project-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalImg = document.getElementById("modal-img");
+    const modalDescription = document.getElementById("modal-description");
+    const modalDownload = document.getElementById("modal-download");
+    const closeModal = document.querySelector(".close-modal");
+
+    let currentProjectImages = [];
+    let currentImageIndex = 0;
+    let slideshowInterval;
+
+    const updateSlideshow = () => {
+        modalImg.src = currentProjectImages[currentImageIndex];
+    };
+
+    const startSlideshow = () => {
+        slideshowInterval = setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % currentProjectImages.length; // Loop back to the first image
+            updateSlideshow();
+        }, 3000); // Change slides every 3 seconds
+    };
+
+    const stopSlideshow = () => {
+        clearInterval(slideshowInterval);
+    };
+
+    document.querySelectorAll(".project-card").forEach(card => {
+        card.addEventListener("click", () => {
+            const projectId = parseInt(card.getAttribute("data-project"));
+            const project = projects.find(p => p.id === projectId);
+
+            if (project) {
+                modalTitle.textContent = project.title;
+                modalDescription.textContent = project.description;
+                modalDownload.href = project.downloadLink;
+
+                currentProjectImages = project.images;
+                currentImageIndex = 0; // Start with the first image
+                updateSlideshow();
+
+                modal.style.display = "block";
+                startSlideshow(); // Start the automatic slideshow
+            }
+        });
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+        stopSlideshow(); // Stop the slideshow when the modal is closed
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            stopSlideshow(); // Stop the slideshow when clicking outside the modal
+        }
+    });
+});
+    </script>
+</body>
+</html>
