@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="jpg" href="img/wew.jpg">
 </head>
 <body>
     <!-- Sidebar -->
@@ -40,19 +41,20 @@
                 <img src="img/project/bis/bh.png" alt="Project 3 Cover" class="project-cover">
                 <h3>BOL.ANON HUB</h3>
             </div>
-			<!--
+		
             <div class="project-card" data-project="4">
-                <img src="img/COMPFESTA.png" alt="Project 4 Cover" class="project-cover">
-                <h3>Project Title 4</h3>
+                <img src="img/221.png" alt="Project 4 Cover" class="project-cover">
+                <h3>NUMERICAL METHOD CALCULATOR - PYTHON</h3>
             </div>
-            <div class="project-card" data-project="5">
-                <img src="img/COMPFESTA.png" alt="Project 5 Cover" class="project-cover">
-                <h3>Project Title 5</h3>
+			<div class="project-card" data-project="5">
+                <img src="img/221b.png" alt="Project 5 Cover" class="project-cover">
+                
+                <h3>NUMERICAL METHOD CALCULATOR - MATLAB</h3>
             </div>		
-            <div class="project-card" data-project="5">
-                <img src="img/COMPFESTA.png" alt="Project 5 Cover" class="project-cover">
-                <h3>Project Title 5</h3>
-            </div>		-->				
+            <div class="project-card" data-project="6">
+                <img src="img/223.png" alt="Project 5 Cover" class="project-cover">
+                <h3>SUMUBOT</h3>
+            </div>				
         </div>
     </div>
 
@@ -106,9 +108,26 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         { 
             id: 4, 
-            title: "Project Title 4", 
-            description: "This is the description for Project 4.", 
-            images: ["img/project4/1.jpg", "img/project4/2.jpg"], 
+            title: "NUMERICAL METHOD CALCULATOR - PYTHON", 
+         description: `The Numerical Method Root Finder Calculator is a Python-based application developed to solve nonlinear equations through classical numerical techniques. It offers a suite of methods including the Bisection Method, Newton-Raphson Method, Regula Falsi, Secant Method, Incremental Search, and the Graphical Method. Users can input mathematical functions as string expressions, which are then processed and evaluated using secure and efficient libraries. The system is designed to handle a wide variety of mathematical expressions, including polynomial and transcendental equations, while supporting features like root refinement, multiple root detection, and error handling. <a href="https://drive.google.com/file/d/1WrhhBSUUrxC8hAnvfND6L08UNA6rpXjh/view?usp=sharing" target="_blank">View Documentation</a>
+        <br><iframe width="760" height="380" src="https://www.youtube.com/embed/_Aq6p4mBxbY?si=GGeEo0MYSK1MBFO6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`, 
+            images: ["img/py/1.png", "img/py/2.png", "img/py/3.png", "img/py/4.png", "img/py/5.png", "img/py/6.png", "img/py/7.png", "img/py/8.png"], 
+            downloadLink: "https://github.com/Snshinegurl/NumericalMethod_RootFinder.git" 
+        },
+        { 
+            id: 5, 
+            title: "NUMERICAL METHOD CALCULATOR - MATLAB", 
+         description: `The MATLAB Root Finder Tool is an educational numerical analysis application that implements six classical root-finding methods (Graphical, Incremental Search, Bisection, Newton-Raphson, Regula Falsi, and Secant) to solve nonlinear equations. Designed for students and engineers, it provides an interactive console interface for inputting functions (including trigonometric, exponential, and polynomial expressions) and outputs detailed results with step-by-step iteration tables, error analysis, and visual plots of the function with identified roots. The tool emphasizes both computational accuracy and pedagogical clarity, enabling users to compare method performance and understand convergence behaviors. With its modular class structure and support for symbolic differentiation, it serves as a practical platform for learning numerical methods while offering potential for future expansion through additional algorithms and GUI enhancements. <a href="https://drive.google.com/file/d/1FYXZwoV3cnXhgzO3_LOyUG7mBb8yLv5C/view?usp=sharing" target="_blank">View Documentation</a> .
+        <br><iframe width="760" height="380" src="https://www.youtube.com/embed/-fRvGHAxTdQ?si=ibjii_k4_iszQHhJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> `, 
+            images: ["img/MAT/1.png", "img/MAT/2.png", "img/MAT/3.png", "img/MAT/4.png", "img/MAT/5.png", "img/MAT/6.png"], 
+            downloadLink: "files/project4.zip" 
+        },
+        { 
+            id: 6, 
+            title: "SUMUBOT", 
+         description: `A Sumobot is a machine that pushes the opponent or another bot, out of a circular ring. It is equipped with components such as, Ultrasonic Sensor for detecting other bots, IR sensor for Identifying the surface color in order for the bot to stay in the ring, Motors attached to the wheel for the bot to move, Motor Driver to control the direction of the bot, battery for power and Microcontroller acting as the brain of the bot.<a href="https://drive.google.com/file/d/15BjLp-cxKn1R2CR79aoBtncsf2EkbyhH/view?usp=sharing" target="_blank">View Documentation</a>
+        <br><iframe width="760" height="380" src="https://www.youtube.com/embed/I_05BunfV-c?si=8WJV3aIvjpXXVYBI&amp;start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>`, 
+            images: ["img/Sumo/1.png", "img/Sumo/2.png", "img/Sumo/3.png", "img/Sumo/4.png"], 
             downloadLink: "files/project4.zip" 
         },
     ];
@@ -132,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slideshowInterval = setInterval(() => {
             currentImageIndex = (currentImageIndex + 1) % currentProjectImages.length; // Loop back to the first image
             updateSlideshow();
-        }, 3000); // Change slides every 3 seconds
+        }, 5000); // Change slides every 3 seconds
     };
 
     const stopSlideshow = () => {
@@ -146,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (project) {
                 modalTitle.textContent = project.title;
-                modalDescription.textContent = project.description;
+                modalDescription.innerHTML = project.description;
                 modalDownload.href = project.downloadLink;
 
                 currentProjectImages = project.images;

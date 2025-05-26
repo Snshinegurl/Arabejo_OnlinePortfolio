@@ -347,20 +347,24 @@ body {
 .modal {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
-    background: white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    border-radius: 10px;
-    padding: 20px;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enables vertical scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 10px;
     position: relative;
+    overflow-y: auto; /* Ensures scroll inside modal if content is long */
+    max-height: 80vh; /* Prevents modal from exceeding viewport height */
 }
 
 .close-modal {
@@ -899,4 +903,18 @@ button:hover {
     .certificate-grid {
         flex-direction: column; /* Stack certificate cards */
     }
+}
+#modal-description a {
+    color: #007BFF;                /* Bright blue */
+    text-decoration: none;         /* No underline */
+    font-weight: 600;              /* Slightly bold */
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background highlight */
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#modal-description a:hover {
+    background-color: rgba(0, 123, 255, 0.2); /* Slightly stronger highlight on hover */
+    color: #0056b3;                           /* Darker blue on hover */
 }
